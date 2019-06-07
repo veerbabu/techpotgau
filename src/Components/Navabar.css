@@ -1,0 +1,13 @@
+Nav{
+    width:100%;
+    height:5%;
+    background: rgba(13, 122, 117, 0.493);
+    border-top: 1px solid rgba(139, 10, 10, 0.2);
+    border-bottom:  1px solid rgba(185, 199, 168, 0.2);
+position:sticky;
+    top:0;
+}
+.navbar{
+    position:sticky;
+  
+}
