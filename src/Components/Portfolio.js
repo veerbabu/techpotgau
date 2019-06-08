@@ -5,9 +5,7 @@ import Slider from 'react-slick';
 
 const Wrapper=styled.div`
 width:100%
-padding:32px
-padding-top: 120px
-padding-bottom: 120px
+
   background-color: transparent
   text-align: center
   `;
@@ -34,7 +32,7 @@ class Portfolio extends Component{
       <Page>flutter</Page>
       </Slider>
       </Wrapper>
-    );
+    )
   }
 
 }

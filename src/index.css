@@ -33,9 +33,7 @@ nav {
   padding: 12px 0;
   display: grid;
   grid-template-columns: 2fr 1fr;
-  -webkit-box-shadow: 0px 10px 54px -11px rgba(51, 11, 114, 0.75)75);
--moz-box-shadow: 0px 10px 54px -11px rgba(0,0,0,0.75);
-box-shadow: 0px 10px 54px -11px rgba(0,0,0,0.75);
+
 }
 
 
@@ -80,10 +78,12 @@ nav ul li a{
 
 header {
   background: url("./images/companyImage.jpg");
-  background-size: 100%;
-  height: 700px;
+
+  background-size: cover;
+  height: 100vh;
   background-position: center;
   position: relative;
+  background-repeat: no-repeat;
  
 }
 
@@ -429,14 +429,10 @@ footer ul li a {
 
 
 @media (max-width:1099px) and (min-width:850px) {
-  header {
-    height: 350px;
-    background-position: bottom;
-  }
 
   header div.head {
     width: 75%;
-    padding-top: 400px;
+   
     grid-template-columns: 1fr;
     
   }
@@ -485,10 +481,7 @@ footer ul li a {
 
 
 @media (max-width:849px) and (min-width:600px) {
-  header {
-  height: 440px;
 
-  }
   
   
   header div.head {
@@ -544,9 +537,9 @@ footer ul li a {
 }
 
 
-@media screen (max-width:599px) and (min-width:0px) {
+@media  (max-width:599px) and (min-width:0px) {
   nav {
-   text-align: center;
+    text-align: center;
     display: grid;
     grid-template-columns: 1fr;
   }
@@ -567,13 +560,7 @@ footer ul li a {
    
   }
   
-  header {
-     
-    background-size: 160%;
-    height: 270px;
-    position: relative;
-   
-  }
+ 
   
   header div.head {
     width: 75%;
@@ -669,5 +656,7 @@ footer ul li a {
  font-size: 1.8rem;
   }
 }
-.container{
+
+.slick-prev, .slick-next{
+  display: none!important;
 }
