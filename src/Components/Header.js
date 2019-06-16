@@ -1,32 +1,55 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Nava from "./Nav";
-import { Link } from 'react-scroll';
-import styled from 'styled-components';
-//import Nedia from './Media';
-import { css } from 'styled-components';
+import './Navabar.css'
 
-class Header extends Component {
-  render() {
-    return (
-     <header>
-     <Nava/>
-    <div className="head">
-      <h1>we innovate next big thing</h1>
-            <div>
-<p>become a techpot and be a part of our innovative garden</p>
-<Link activeClass="active" to="contact"
-spy={true}
-smooth={true}
-offset={0}
-duration={500}>
- <div><a className="contact" href="#">Contact Us</a></div></Link>
-            </div>
-        </div>
-       </header>
-      
-      
+
+export default class Header extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      scrollPosition: 0
+    };
+  }
+
+  debounce = (fn, time) => {
+    let timeout;
+
+    return function() {
+      const functionCall = () => fn.apply(this, arguments);
+
+      clearTimeout(timeout);
+      timeout = setTimeout(functionCall, time);
+    };
+  };
+
+  handleScroll = () => {
+    const scrollPosition = window.scrollY || window.pageYOffset;
+    if (scrollPosition < 1) {
+      // Safari scrolls past 0 so scrollPosition needs to be reset to 0
+      this.setState({ scrollPosition: 0 });
+    } else {
+      this.setState({ scrollPosition });
+    }
+  };
+
+  componentDidMount() {
+    return window.addEventListener(
+      "scroll",
+      this.debounce(this.handleScroll, 16)
     );
+  }
+
+  componentWillUnmount() {
+    return window.removeEventListener(
+      "scroll",
+      this.debounce(this.handleScroll, 16)
+    );
+  }
+
+  render() {
+    const sticky = !!this.state.scrollPosition;
+    return (<div className={`header ${sticky ? "header--sticky" : ""}`} ><Nava/></div>);
   }
 }
 
-export default Header;
+

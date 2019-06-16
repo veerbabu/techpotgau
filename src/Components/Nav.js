@@ -1,47 +1,47 @@
 import React, { Component } from 'react';
 import { Link } from 'react-scroll';
-import styled from 'styled-components';
+import './Navabar.css'
 
 
 class Nava extends Component {
   render() {
     return (
-      <nav>
-          <ul>
+      <nav className="nav-bar">
+        <div className="nav-1">
              <Link activeClass="active" to="head"
           spy={true}
           smooth={true}
           offset={0}
           duration={500}>
-           <li><a href="abouts">Tech<span>PoT</span></a></li></Link>
-          </ul>
-          <ul>
+         TechPoT</Link>
+         </div>
+          <div className="nav-2">
           <Link activeClass="active" to="abouts"
           spy={true}
           smooth={true}
           offset={0}
           duration={500}>
-          <li><a href="abouts">About us</a></li></Link> 
+         About Us</Link> 
 
              <Link activeClass="active" to="service"
              spy={true}
              smooth={true}
              offset={0}
              duration={500}>
-             <li><a href="abouts">Services</a></li></Link> 
+             Services</Link> 
               <Link activeClass="active" to="portfolio"
               spy={true}
               smooth={true}
               offset={0}
               duration={500}>
-               <li><a href="abouts">portfolio</a></li></Link>
+              Portfolio</Link>
                <Link activeClass="active" to="process"
                spy={true}
                smooth={true}
                offset={0}
                duration={500}>
-                <li><a href="abouts">process</a></li></Link>
-               </ul>
+               Process</Link>
+               </div>
       </nav>
     );
   }
