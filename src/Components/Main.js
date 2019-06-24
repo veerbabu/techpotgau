@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
+import React from 'react';
 //import Form from "./form";
 import Contact from "./Contact";
-import styled from 'styled-components';
 
-class Main extends Component {
+
+class Main extends React.Component {
   render() {
     return (
       <main>

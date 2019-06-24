@@ -1,31 +1,41 @@
 .nav-bar{
-   
-    background: rgb(0, 0, 0);
+    background: transparent;
     display: flex;
     justify-content: space-between;
-    
-    color: white;
+    padding: 0 40px;
+   
 }
 .nav-bar .nav-2 a{
  margin-right: 1rem;
 }
 
 .header {
-    -webkit-transition: all 0.6s ease-out;
-    -moz-transition: all 0.6s ease-out;
-    -o-transition: all 0.6s ease-out;
-    -ms-transition: all 0.6s ease-out;
-    transition: all 0.6s ease-out;
-    background: rgb(0, 0, 0);
+  position: relative;
+  min-height: 50px;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+  position: fixed;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+  color: white;
+  -webkit-transition: all 0.6s ease-out;
+  -moz-transition: all 0.6s ease-out;
+  -o-transition: all 0.6s ease-out;
+  -ms-transition: all 0.6s ease-out;
+  transition: all 0.6s ease-out;
+    background: transparent;
     border: none;
-    padding: 20px 10px 10px 10px;
-  
+    padding-top: 40px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 
-    z-index: 100;
   }
   
   .header--sticky {
-    position: sticky;
-    top: 0;
-    padding-top:30px;
+    background: rgba(27, 109, 174, 0.8);
+    padding-top: 10px;
+    
+
   }  

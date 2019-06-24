@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
-import styled from 'styled-components';
+import React from 'react';
 
-class Contact extends Component {
+
+class Contact extends React.Component {
   constructor(){
       super();
       this.state = {
